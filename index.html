@@ -191,7 +191,11 @@
                                                                         en este mágico camino del programador autodidacta. Hoy en día sigo estudiando, incursionando y evolucionando a la par
                                                                         del mundo de la programación.
                                                                         </p>
+<<<<<<< HEAD
                                                                         <a href="CV-NicoleDeVincenzo2020.pdf" class="button fit">Ver curriculum </a>
+=======
+									<a href="CV-NicoleDeVincenzo2020.pdf" class="button fit">Ver curriculum </a>
+>>>>>>> 86c413cc04e1a17aabaa1c767180205b9274bb95
 								</div>
 							</section>
 
@@ -221,6 +225,7 @@
 										<li><input type="reset" value="Nuevo" /></li>
 										<p id="my-form-status"></p>
 									</ul>
+									<p id="my-form-status"></p>
 								</form>
 							</section>
 							<section class="split">
@@ -278,12 +283,16 @@
 			<script>
 				  window.addEventListener("DOMContentLoaded", function() {
 
+<<<<<<< HEAD
 				    // get the form elements defined in your form HTML above
 				    
+=======
+>>>>>>> 86c413cc04e1a17aabaa1c767180205b9274bb95
 				    var form = document.getElementById("my-form");
 				    var button = document.getElementById("my-form-button");
 				    var status = document.getElementById("my-form-status");
 
+<<<<<<< HEAD
 				    // Success and Error functions for after the form is submitted
 				    
 				    function success() {
@@ -308,6 +317,27 @@
 				  // helper function for sending an AJAX request
 
 				  function ajax(method, url, data, success, error) {
+=======
+				    				    
+				    function success() {
+				      form.reset();
+				      status.innerHTML = "Tu mensaje se ha enviado con éxito!";
+				    }
+
+				    function error() {
+				      status.innerHTML = "Oops! Ocurrió un problema, vuelve a intentarlo más tarde.";
+				    }
+
+				   
+				    form.addEventListener("submit", function(ev) {
+				      ev.preventDefault();
+				      var data = new FormData(form);
+				      ajax(form.method, form.action, data, success, error);
+				    });
+				  });
+				  
+				    function ajax(method, url, data, success, error) {
+>>>>>>> 86c413cc04e1a17aabaa1c767180205b9274bb95
 				    var xhr = new XMLHttpRequest();
 				    xhr.open(method, url);
 				    xhr.setRequestHeader("Accept", "application/json");
