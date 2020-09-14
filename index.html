@@ -218,8 +218,8 @@
 									<ul class="actions">
 										<li><input type="submit" id="my-form-button" value="Enviar Mensaje" class="primary" /></li>
 										<li><input type="reset" value="Nuevo" /></li>
-										<p id="my-form-status"></p>
 									</ul>
+									<p id="my-form-status"></p>
 								</form>
 							</section>
 							<section class="split">
@@ -277,26 +277,21 @@
 			<script>
 				  window.addEventListener("DOMContentLoaded", function() {
 
-				    // get the form elements defined in your form HTML above
-				    
 				    var form = document.getElementById("my-form");
 				    var button = document.getElementById("my-form-button");
 				    var status = document.getElementById("my-form-status");
 
-				    // Success and Error functions for after the form is submitted
-				    
+				    				    
 				    function success() {
 				      form.reset();
-				      button.style = "display: none ";
-				      status.innerHTML = "Thanks!";
+				      status.innerHTML = "Tu mensaje se ha enviado con éxito!";
 				    }
 
 				    function error() {
-				      status.innerHTML = "Oops! There was a problem.";
+				      status.innerHTML = "Oops! Ocurrió un problema, vuelve a intentarlo más tarde.";
 				    }
 
-				    // handle the form submission event
-
+				   
 				    form.addEventListener("submit", function(ev) {
 				      ev.preventDefault();
 				      var data = new FormData(form);
@@ -304,9 +299,7 @@
 				    });
 				  });
 				  
-				  // helper function for sending an AJAX request
-
-				  function ajax(method, url, data, success, error) {
+				    function ajax(method, url, data, success, error) {
 				    var xhr = new XMLHttpRequest();
 				    xhr.open(method, url);
 				    xhr.setRequestHeader("Accept", "application/json");
