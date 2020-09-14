@@ -350,6 +350,7 @@ input, select, textarea {
 
 		.row > .col-2 {
 			width: 16.66667%;
+			margin-top: 25px;
 		}
 
 		.row > .off-2 {
