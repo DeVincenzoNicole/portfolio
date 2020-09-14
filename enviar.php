@@ -3,7 +3,7 @@ $nombre = $_POST['name'];
 $mail = $_POST['email'];
 $mensaje = $_POST['message'];
 
-$header = 'From: ' . $mail . "\r\n";
+$header = "From: " . $mail . "\r\n";
 $header .= "Content-Type: text/plain";
 
 $mensaje = "Este mensaje fue enviado por " . $nombre . "\r\n";
