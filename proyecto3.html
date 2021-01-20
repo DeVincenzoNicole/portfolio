@@ -58,13 +58,19 @@
 									<li><p><b>Objetivo:</b></p>
 									<p>Poner en práctica nuevas herramientas tanto de front como backend</p></li>
 									<li><p><b>Descripción:</b></p>
-									<p>Este proyecto consta de una tienda online con carrito de compras.
-									En la página principal se encuentra:
-									- Logotipo
-									- Buscador de texto
-									- Categorías de los productos 
-									- Cada producto con su imagen, nombre, precio y botón de añadir al carrito.
-									- Soporte de paginación
+									<p>Este sitio web es una tienda online que cuenta con:
+									<ul>
+										<li>Un listado de productos obtenido desde una base de datos.</li>
+										<li>Estos productos son consultados mediante una API y se clasifican por categoría. </li>
+										<li>Desde el buscador se accede mediante la API a la base de datos obteniendo un JSON con la lista de productos que contienen la palabra ingresada. </li>
+										<li>Cada categoría cuenta con un componente de paginación, donde se puede modificar la cantidad de productos visibles por página.</li>
+										<li>Desde cada producto se puede acceder a los detales de cada uno (Imagen, título, precio, descripción) y la opción tanto de añadir al carrito como de volver al listado.</li>
+										<li>Una vez que se añade un producto al carrito, se actualiza automaticamente el componente del mismo, donde se puede ingresar y ver los detalles de los productos seleccionados y también se puede aumentar/disminuir la cantidad o remover el producto.</li>
+										<li>Para finalizar la compra hay que llenar 4 formularios: datos personales, de envío, facturación y medio de pago. Dichos formularios poseen todas las validaciones correspondientes en caso de errores.</li>
+										<li>Los países son traidos desde la base de datos y según el país seleccionado se leen los estados correspondientes.</li>
+										<li>Para los datos de facturación no es necesario llenar los campos manualmente, se ofrece una opción que rellena los campos con los mismos datos de envío.</li>
+										<li>Una vez que todo esta correcto, se envían los datos a la base de datos y se genera automáticamente un UUID (ID Unico Universal) como número de seguimiento de la compra que será mostrado en una alerta cuando la compra se haya realizado de forma satisfactoria.</li>
+									</ul>
 									</p></li>
 									<li><p><b>Herramientas de Desarrollo:</b></p>
 									<p>Front-End:
